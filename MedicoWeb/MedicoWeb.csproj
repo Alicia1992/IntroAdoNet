@@ -111,11 +111,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infra\MesSessions.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\HoraireModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +128,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\slider.css" />
     <Content Include="Content\style.css" />
+    <Content Include="db.sql" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -163,6 +169,7 @@
     <Content Include="images\img-sprite.png" />
     <Content Include="images\left-quotes.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\male.ico" />
     <Content Include="images\middle.jpg" />
     <Content Include="images\move-top.png" />
     <Content Include="images\n1.jpg" />
@@ -182,6 +189,7 @@
     <Content Include="images\t2.jpg" />
     <Content Include="images\t3.jpg" />
     <Content Include="images\tw.png" />
+    <Content Include="images\unidentified.ico" />
     <Content Include="images\wallhaven-10742-thumb.jpg" />
     <Content Include="images\wallhaven-10742.jpg" />
     <Content Include="images\wallhaven-12018-thumbnail.jpg" />
@@ -224,9 +232,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Medecins\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\TestAjax.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Ajax\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

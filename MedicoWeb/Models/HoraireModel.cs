@@ -117,6 +117,8 @@ namespace MedicoWeb.Models
                         oDr.Close();
                     // 4 - Fermer la connexion
                         oConn.Close();
+
+                        
 	            }
 	            catch (Exception)
 	            {

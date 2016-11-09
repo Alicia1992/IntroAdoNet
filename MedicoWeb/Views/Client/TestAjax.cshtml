@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    function CoucouFn()
+    {
+        //1ere requete
+        $.ajax
+        (
+            {
+                url: "../Ajax/Image"
+            }
+        )
+            .done(
+                function (data) {
+                    $("#affich").attr("src", "../images/" + data);
+
+                }
+               );
+        //2eme requete
+        $.ajax
+        (
+            {
+                url: "../Zorro.html"
+            }
+        )
+            .done(
+                function (data) {
+                    $("#titre").html(data);
+
+                }
+               );
+    }
+
+</script>
+<h1 id="titre">Hello</h1>
+<input type="password" />
+<input type="button" onclick="CoucouFn()" value="Dis Coucou" />
+
+<img id="affich" />

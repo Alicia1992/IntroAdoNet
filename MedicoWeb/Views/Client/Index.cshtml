@@ -1,0 +1,112 @@
+﻿@model MedicoWeb.Models.Client
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken() //on pourrait le faire en HTML plutot qu'en ASP
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nom, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nom, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nom, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prenom, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prenom, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Prenom, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateNaissance, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateNaissance, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DateNaissance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Numero, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adresse, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Adresse, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adresse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div><div class="form-group">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center">
+                <img src="~/images/male.ico" width="50" />
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center">
+                <img src="~/images/female.ico" width="50" />
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center">
+                <img src="~/images/unidentified.ico" width="50" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center">
+                <input type="radio" name="Sexe" value="@bool.TrueString" />
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center">
+                <input type="radio" name="Sexe" value="@bool.FalseString" />
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4" style="text-align:center">
+                <input type="radio" name="Sexe" value="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
